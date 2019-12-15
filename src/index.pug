@@ -1,0 +1,115 @@
+extends layout.pug
+
+block variabl
+	- var title = "Page"
+
+//- block header
+//- 	include include/header
+
+block main
+	main.section_main
+
+		.popup-calculate
+			
+			form
+
+				.popup-sub
+					.sub-popup--head
+						h3 ОСТАВЬТЕ ЗАЯВКУ НАШИМ СПЕЦИАЛИСТАМ
+						p А наш специалист свяжется с Вами и обсудит все детали
+					.sub-popup--wrap
+						.field.col-100
+							label Введите Ваше имя
+							input(type="text" placeholder="Иван Иванов").fill-user
+						.field.col-100
+							label Введите Ваш телефон
+							input(type="text" placeholder="88005355555").fill-phone
+						.field.col-100
+							label Введите Ваш город
+							select.js-select2.fill-city
+						.field.col-100
+							button(type="submit").button-submite.button-open--contact-form Оформить заявку
+				
+				.popup-wrapp
+					h3.head-popup Экспресс-расчет стоимости доставки
+					.popup-wrapper
+						.field.col-50
+							label Откуда:
+							select.js-select2#select-city1
+								//- option Алматы
+
+						.field.col-50
+							label Куда:
+							select.select-to#select-city2
+								
+
+						.field.col-100
+							label Наименование груза(Характер груза):
+							select.product-select
+								option АВТОЗАПЧАСТИ
+								option АВТОШИНА
+								option АККУМУЛЯТОРЫ
+								option АКСЕССУАРЫ
+								option БЫТОВАЯ ТЕХНИКА
+
+						.field.col-25
+							label Вес (кг):
+							input(type="number" max="1000000" name="quantity" value="1" required)#weight
+						.field.col-25
+							label Объемы (м3):
+							input(type="number" max="1000000" name="quantity" value="0.01" required)#volume
+						.field.col-25
+							label Кол-во мест:
+							input(type="number" max="1000000" name="quantity" value="1" required)#quantity
+						.field.col-25
+							.button-items
+								a(href="#").button-submite#button-submite рассчитать
+
+					.error-massege
+						p
+
+					.result-wrapper
+						h3
+						table#table-result.table-result
+							thead
+								tr
+									th
+									th Заберем
+									th Перевезем
+									th Доставим
+									th Цена, тг
+							tbody
+								tr.is-active
+									td
+										input(type="radio" name="table-radio" checked)
+									td
+									td
+									td
+									td
+								tr
+									td
+										input(type="radio" name="table-radio")
+									td
+									td
+									td
+									td
+								tr
+									td
+										input(type="radio" name="table-radio")
+									td
+									td
+									td
+									td
+								tr
+									td
+										input(type="radio" name="table-radio")
+									td
+									td
+									td
+									td
+
+						#itog
+							p
+
+						.open--contact-form
+							a(href="#").button-submite.button-open--contact-form ОФОРМИТЬ ЭКСПРЕСС ЗАЯВКУ

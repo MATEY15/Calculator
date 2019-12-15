@@ -1,0 +1,299 @@
+@import ("../../libs/template/reset.css")
+@import ("../../libs/template/lib")
+@import ("../../libs/template/media")
+
+@import ("libs/*.css")
+@import ("fonts")
+@import ("blocks/**/**")
+
+*
+	box-sizing border-box
+
+html
+	// background: cBlack
+
+body
+	overflow-x: hidden
+	min-width 320px
+	background: #ccc
+	&.overflow
+		overflow hidden
+
+
+/* Popup */
+
+.popup-calculate
+	position relative
+	max-width 800px
+	width 100%
+	background: #fff
+	padding 30px
+	margin 40px auto
+	
+	h3
+		font-size 24px
+		margin-bottom 14px
+	
+
+.popup-wrapper,
+.popup-sub
+	display flex
+	flex-direction row
+	flex-wrap wrap
+	margin 0 -7px
+
+	.field
+		padding 0 7px
+		
+		label
+			display inline-block
+			margin-bottom 6px
+			font-size 14px
+		
+		input
+			width 100%
+			min-height 50px
+			border 1px solid #ccc
+			padding 5px 10px
+			background: #F8F8F8
+	
+	.col-100
+		width 100%
+	.col-50
+		width 50%
+	.col-25
+		width 25%
+
+.popup-sub
+	display none
+	position relative
+	top 0
+	left 0
+	width 100%
+	height 100%
+	background: #fff
+	z-index 100
+	transition all .2s ease-out
+	
+.sub-popup--head
+	padding 0 7px
+	text-align center
+	margin-bottom 30px
+	
+
+.sub-popup--head,
+.sub-popup--wrap
+	width 100%
+
+.sub-popup--wrap
+	.field input
+		margin-bottom 25px
+		border 2px solid #E9BA48
+
+.fill-user,
+.fill-phone
+	padding-left 55px !important
+	background-repeat no-repeat !important
+	background-position: 15px center !important
+
+.fill-user
+	background: url(../img/user-ico-u5752.png) !important
+	background-repeat no-repeat !important
+	background-position: 15px center !important
+.fill-phone
+	background: url(../img/phone-ico-u5772.png) !important
+	background-repeat no-repeat !important
+	background-position: 15px center !important
+.fill-city + .select2.select2-container .select2-selection
+	background: url(../img/point.png) !important
+	background-repeat no-repeat !important
+	background-position: 15px center !important
+	border 2px solid #E9BA48
+	padding-left 45px !important
+	border-radius 0
+
+.button-items
+	height 100%
+	display flex
+	flex-direction row
+	align-items flex-end
+
+.button-submite
+	display flex
+	align-items center
+	justify-content center
+	width 100%
+	min-height 50px
+	text-align center
+	position relative
+	background: #E9BA48
+	padding 6px 10px
+	color #fff
+	text-transform uppercase
+	text-decoration none
+
+.error-massege
+	padding-top 30px
+	p
+		text-align center
+		color: #8b0000
+
+.result-wrapper
+	display none
+	margin-top 30px
+	padding-top 30px
+	border-top 1px solid #ccc
+
+.table-result
+	width 100%
+	border-collapse: collapse
+	table-layout: auto
+	tr
+		transition all .2s ease-out
+		th, td
+			border 1px solid #DDDDDD
+			text-align center
+			padding 8px 4px
+			min-height 45px
+			
+	tbody
+		tr
+			cursor pointer
+			&:hover
+				background: #F4F8FB
+			&.is-active
+				background: #C0F9BC
+
+.head-popup
+	font-size 28px !important
+	text-align center
+	margin-bottom 30px !important
+
+#itog
+	text-align right
+	padding-top 20px
+	p
+		color #58bc51
+		font-weight bold
+		font-size 26px
+
+.open--contact-form
+	display flex
+	flex-direction row
+	justify-content center
+	margin-top 20px
+
+.button-open--contact-form
+	background: #58BC51
+	width auto
+	padding-left 15px
+	padding-right 15px
+	margin auto
+
+.select2.select2-container
+	width: 100% !important
+
+.select2.select2-container .select2-selection
+	border: 1px solid #ccc
+	-webkit-border-radius: 3px
+	-moz-border-radius: 3px
+	border-radius: 3px
+	height: 50px
+	margin-bottom: 25px
+	outline: none
+	transition: all .15s ease-in-out
+	background: #F8F8F8
+
+.select2.select2-container .select2-selection .select2-selection__rendered
+	color: #333
+	line-height: 50px
+	padding-right: 33px
+
+.select2.select2-container .select2-selection .select2-selection__arrow
+	background: #f8f8f8
+	border-left: 1px solid #ccc
+	-webkit-border-radius: 0 3px 3px 0
+	-moz-border-radius: 0 3px 3px 0
+	border-radius: 0 3px 3px 0
+	height: 48px
+	width: 33px
+
+.select2.select2-container.select2-container--open .select2-selection.select2-selection--single
+	background: #f8f8f8
+
+.select2.select2-container.select2-container--open .select2-selection.select2-selection--single .select2-selection__arrow
+	-webkit-border-radius: 0 3px 0 0
+	-moz-border-radius: 0 3px 0 0
+	border-radius: 0 3px 0 0
+
+.select2.select2-container.select2-container--open .select2-selection.select2-selection--multiple
+	border: 1px solid #34495e
+
+.select2.select2-container.select2-container--focus .select2-selection
+	border: 1px solid #34495e
+
+.select2.select2-container .select2-selection--multiple
+	height: auto
+	min-height: 34px
+
+.select2.select2-container .select2-selection--multiple .select2-search--inline .select2-search__field
+	margin-top: 0
+	height: 32px
+
+.select2.select2-container .select2-selection--multiple .select2-selection__rendered
+	display: block
+	padding: 0 4px
+	line-height: 29px
+
+.select2.select2-container .select2-selection--multiple .select2-selection__choice
+	background-color: #f8f8f8
+	border: 1px solid #ccc
+	-webkit-border-radius: 3px
+	-moz-border-radius: 3px
+	border-radius: 3px
+	margin: 4px 4px 0 0
+	padding: 0 6px 0 22px
+	height: 24px
+	line-height: 24px
+	font-size: 12px
+	position: relative
+
+.select2.select2-container .select2-selection--multiple .select2-selection__choice .select2-selection__choice__remove
+	position: absolute
+	top: 0
+	left: 0
+	height: 22px
+	width: 22px
+	margin: 0
+	text-align: center
+	color: #e74c3c
+	font-weight: bold
+	font-size: 16px
+
+.select2-container .select2-dropdown
+	background: transparent
+	border: none
+	margin-top: -5px
+
+.select2-container .select2-dropdown .select2-search
+	padding: 0
+
+.select2-container .select2-dropdown .select2-search input
+	outline: none
+	border: 1px solid #34495e
+	border-bottom: none
+	min-height 40px
+	padding: 4px 6px
+
+.select2-container .select2-dropdown .select2-results
+	padding: 0
+
+.select2-container .select2-dropdown .select2-results ul
+	background: #fff
+	border: 1px solid #34495e
+
+.select2-container .select2-dropdown .select2-results ul .select2-results__option--highlighted[aria-selected]
+	background-color: #3498db
+
+.big-drop
+	width: 600px !important
